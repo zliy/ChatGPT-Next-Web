@@ -17,22 +17,22 @@ export enum Theme {
 
 const DEFAULT_CONFIG = {
   historyMessageCount: 4,
-  compressMessageLengthThreshold: 1000,
+  compressMessageLengthThreshold: 4096,
   sendBotMessages: true as boolean,
-  submitKey: SubmitKey.CtrlEnter as SubmitKey,
+  submitKey: SubmitKey.Enter as SubmitKey,
   avatar: "1f603",
   fontSize: 14,
   theme: Theme.Auto as Theme,
-  tightBorder: false,
-  sendPreviewBubble: true,
+  tightBorder: true,
+  sendPreviewBubble: false,
   sidebarWidth: 300,
 
   disablePromptHint: false,
 
   modelConfig: {
     model: "gpt-3.5-turbo" as ModelType,
-    temperature: 1,
-    max_tokens: 2000,
+    temperature: 0.7,
+    max_tokens: 4096,
     presence_penalty: 0,
   },
 };
